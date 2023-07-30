@@ -1,0 +1,2 @@
+Nombre,Altura,Peso,Color de pelo,Color de piel,Color de ojos,Año de nacimiento,Género,Planeta de origen,Películas,Naves espaciales,Vehículos,URL
+Luke Skywalker,172,77,blond,fair,blue,19BBY,male,https://swapi.dev/api/planets/1/,"https://swapi.dev/api/films/1/, https://swapi.dev/api/films/2/, https://swapi.dev/api/films/3/, https://swapi.dev/api/films/6/","https://swapi.dev/api/starships/12/, https://swapi.dev/api/starships/22/","https://swapi.dev/api/vehicles/14/, https://swapi.dev/api/vehicles/30/",https://swapi.dev/api/people/1/

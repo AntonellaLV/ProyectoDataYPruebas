@@ -1,0 +1,2 @@
+base,visibility,dt,timezone,id,name,cod,coord.lon,coord.lat,main.temp,main.feels_like,main.temp_min,main.temp_max,main.pressure,main.humidity,wind.speed,wind.deg,rain.1h,clouds.all,sys.type,sys.id,sys.country,sys.sunrise,sys.sunset,id,main,description,icon,fecha_hora
+stations,7000,1689971613,-10800,3429577,Resistencia,200,-58.9866,-27.4511,30.64,31.18,28.92,30.98,1007,45,9.26,10,0.13,95,1,8257,AR,1689936173,1689974486,500,Rain,lluvia ligera,10d,2023-07-21 20:33:40.018402

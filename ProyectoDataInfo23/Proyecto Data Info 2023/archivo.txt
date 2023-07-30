@@ -1,0 +1,45 @@
+from datetime import datetime
+
+from sqlalchemy.ext.declarative import declarative_base
+
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, declarative_base, relationship
+from sqlalchemy import Column, Integer, String, DateTime, ForeignKey
+
+
+engine = create_engine('postgresql://postgres:anaeva01@localhost/18julio2023')
+
+Base = declarative_base()
+
+class Empleado(Base):
+    tablename = 'empleado'
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    nombre = Column(String(50))
+    apellido = Column(String(50))
+
+class Pedido(Base):
+    tablename = 'pedido'
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    texto = Column(String(50))
+    #fecha_hora = Column(DateTime)
+    empleado_id = Column(Integer, ForeignKey('empleado.id'))
+    empleado = relationship(Empleado)
+
+class User(Base):
+    tablename = 'users'
+    id = Column(Integer(), primary_key=True)
+    username = Column(String(50), nullable=False, unique=True) 
+    email = Column(String(50), nullable=False, unique=True)
+    created_at = Column(DateTime(), default=datetime.now())
+
+    def str(self):
+        return self.username
+
+
+Session = sessionmaker(engine)
+session = Session()
+
+
+if name == 'main':
+    Base.metadata.drop_all(engine)
+    Base.metadata.create_all(engine)
